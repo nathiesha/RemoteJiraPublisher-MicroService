@@ -4,12 +4,17 @@ package org.example.service;
 import javax.ws.rs.core.MediaType;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Map;
+
+import javax.mail.MessagingException;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
+import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -22,9 +27,10 @@ public class PublisherService {
 	private HttpURLConnection connection;
 
 	@POST
+	@Path("/jira")
 	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-	public String postPublish(@FormParam("urlParams") String urlParams) {
+	public String publishJira(@FormParam("urlParams") String urlParams) {
 
 		try {
 			String username = "devstudiouser@gmail.com";
@@ -85,4 +91,45 @@ public class PublisherService {
 			return "Success";
 	}
 
+	
+	@POST
+	@Path("/email")
+	@Produces(MediaType.TEXT_PLAIN)
+	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+	public String publishEmail(@FormParam("recmail") String recEmail,@FormParam("body") String body) {
+
+		String username="devstudiouser";
+		String password="devUser123";
+		String title="Test Email";
+		EmailPublisher emailPub=new EmailPublisher(username, password, recEmail, title, body);
+		try {
+			return emailPub.publish();
+		} catch (IOException | MessagingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return "failed";
+		}
+
+	
+		}
+	
+	@GET
+	@Path("/env")
+	@Produces(MediaType.TEXT_PLAIN)
+
+	public String getEnv() {
+		
+	 String last="";
+	 Map<String, String> env = System.getenv();
+     for (String envName : env.keySet()) {
+         System.out.format("%s=%s%n",
+                           envName,
+                           env.get(envName));
+         last=envName+" "+env.get(envName);
+     }
+         
+         return last;
+	}
+    
+     
 }
