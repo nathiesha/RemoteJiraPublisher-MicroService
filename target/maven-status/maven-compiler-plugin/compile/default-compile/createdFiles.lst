@@ -1,3 +1,4 @@
-org\example\service\EmailPublisher.class
 org\example\service\PublisherService.class
+org\example\service\JiraPublisher.class
 org\example\service\Application.class
+org\example\service\EmailPublisher.class
