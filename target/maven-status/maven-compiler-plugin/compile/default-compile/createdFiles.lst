@@ -1,4 +1,5 @@
-org\example\service\PublisherService.class
-org\example\service\JiraPublisher.class
-org\example\service\Application.class
-org\example\service\EmailPublisher.class
+constants\EnvironmentVariablesConstants.class
+publishers\EmailPublisher.class
+service\Application.class
+service\PublisherService.class
+publishers\JiraPublisher.class
