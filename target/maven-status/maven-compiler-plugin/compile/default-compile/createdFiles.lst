@@ -1,5 +1,5 @@
-constants\EnvironmentVariablesConstants.class
-publishers\EmailPublisher.class
-service\Application.class
-service\PublisherService.class
-publishers\JiraPublisher.class
+publishers/EmailPublisher.class
+publishers/JiraPublisher.class
+service/PublisherService.class
+service/Application.class
+constants/EnvironmentVariablesConstants.class

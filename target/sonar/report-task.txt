@@ -1,0 +1,6 @@
+projectKey=org.wso2.msf4j:Publisher-Service
+serverUrl=http://localhost:9000
+serverVersion=6.4.0.25310
+dashboardUrl=http://localhost:9000/dashboard/index/org.wso2.msf4j:Publisher-Service
+ceTaskId=AVz3pDLXnHiCwvTL23pQ
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AVz3pDLXnHiCwvTL23pQ
