@@ -14,6 +14,10 @@
 
 	<properties>
 		<microservice.mainClass>service.Application</microservice.mainClass>
+		<sonar.github.oauth>7363f99461b791ffed198fef09824c66e9780432</sonar.github.oauth>
+		<sonar.github.repository>nathiesha/RemoteJiraPublisher-MicroService</sonar.github.repository>
+		<sonar.github.pullRequest>1</sonar.github.pullRequest>
+		<sonar.analysis.mode>issues</sonar.analysis.mode>
 	</properties>
 	<dependencies>
 		<dependency>

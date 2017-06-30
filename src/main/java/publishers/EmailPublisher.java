@@ -32,6 +32,9 @@ import javax.mail.internet.MimeMessage;
 
 public class EmailPublisher {
 
+	private Properties props2;
+	private Session session2;
+	private String username2;
 	private Properties props1;
 	private Session session1;
 	private String username1;
