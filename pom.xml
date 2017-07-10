@@ -10,7 +10,7 @@
 
 	<artifactId>Publisher-Service</artifactId>
 	<version>0.1-SNAPSHOT</version>
-	<name>WSO2 MSF4J Microservice</name>
+	<name>MSF4J Microservice</name>
 
 	<properties>
 		<microservice.mainClass>service.Application</microservice.mainClass>

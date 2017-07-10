@@ -29,6 +29,8 @@ public class JiraPublisher {
 
 	private HttpURLConnection connection;
 	private String urlParameters;
+	private HttpURLConnection connection2;
+	private String urlParameters2;
 	private String userCredentials;
 	private URL url;
 	
