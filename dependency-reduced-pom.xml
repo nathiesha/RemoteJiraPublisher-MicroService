@@ -8,9 +8,13 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>Publisher-Service</artifactId>
-  <name>WSO2 MSF4J Microservice</name>
+  <name>MSF4J Microservice</name>
   <version>0.1-SNAPSHOT</version>
   <properties>
+    <sonar.github.oauth>${env.oauth}</sonar.github.oauth>
+    <sonar.github.pullRequest>${env.pr_number}</sonar.github.pullRequest>
+    <sonar.analysis.mode>issues</sonar.analysis.mode>
+    <sonar.github.repository>${env.repo}</sonar.github.repository>
     <microservice.mainClass>service.Application</microservice.mainClass>
   </properties>
 </project>

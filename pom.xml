@@ -10,10 +10,14 @@
 
 	<artifactId>Publisher-Service</artifactId>
 	<version>0.1-SNAPSHOT</version>
-	<name>WSO2 MSF4J Microservice</name>
+	<name>MSF4J Microservice</name>
 
 	<properties>
 		<microservice.mainClass>service.Application</microservice.mainClass>
+		<sonar.github.oauth>${env.oauth}</sonar.github.oauth>
+		<sonar.github.repository>${env.repo}</sonar.github.repository>
+		<sonar.github.pullRequest>${env.pr_number}</sonar.github.pullRequest>
+		<sonar.analysis.mode>issues</sonar.analysis.mode>
 	</properties>
 	<dependencies>
 		<dependency>
